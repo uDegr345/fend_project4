@@ -1,16 +1,27 @@
 function handleSubmit(event) {
     event.preventDefault()
 
-    // check what text was put into the form field
     let formText = document.getElementById('name').value
-    checkForName(formText)
-
+    const lang = 'en';
+    const apiKey = process.env.API_KEY;
+  
     console.log("::: Form Submitted :::")
-    fetch('http://localhost:8080/test')
+
+    fetch(`/apiCall?key=${apiKey}&text=${formText}&lang=${lang}`, {
+        method: 'POST',
+        credentials: 'same-origin',
+        mode: 'cors',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ input: formText })
+    })
     .then(res => res.json())
-    .then(function(res) {
-        document.getElementById('results').innerHTML = res.message
+    .then(data =>  {
+        updateUI(data);
     })
 }
+
+
 
 export { handleSubmit }

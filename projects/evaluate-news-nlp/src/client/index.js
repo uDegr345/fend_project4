@@ -1,12 +1,13 @@
-import { checkForName } from './js/nameChecker'
 import { handleSubmit } from './js/formHandler'
+import { updateUI } from './js/UIHandler'
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-console.log(checkForName);
+export {
+    handleSubmit,
+    updateUI
+}
 
-alert("I EXIST")
-console.log("CHANGE!!");
