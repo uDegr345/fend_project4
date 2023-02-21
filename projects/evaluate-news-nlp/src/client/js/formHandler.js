@@ -10,7 +10,7 @@ async function handleSubmit(event) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ url })
+        body: JSON.stringify({ "url" : url })
     })
    
     
