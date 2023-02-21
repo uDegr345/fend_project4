@@ -1,5 +1,5 @@
 import { handleSubmit } from './js/formHandler'
-import { updateUI } from './js/UIHandler'
+import { updateUI } from './js/uiHandler'
 import './styles/resets.scss'
 import './styles/base.scss'
 import './styles/footer.scss'
@@ -10,4 +10,3 @@ export {
     handleSubmit,
     updateUI
 }
-
