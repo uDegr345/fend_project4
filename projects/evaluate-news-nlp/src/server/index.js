@@ -20,7 +20,7 @@ app.post('/apiCall', async (req, res) => {
 
 
     console.log("debug test")
-    const formText = req.body.name
+    const formText = req.body.url;
     const lang = 'en';
     const apiKey = process.env.API_KEY;
 
